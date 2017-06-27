@@ -101,7 +101,7 @@ application.post('/', (request, response) => {
 
 application.post('/loser', (request, response) => {
   response.redirect('/');
-  location.reload();
+  resquest.session = null;
 })
 
 application.listen(3000);
