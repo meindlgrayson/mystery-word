@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css" />
+</head>
+<body>
+  <h2>Mystery Word</h2>
+  <h2>You have {{counter}} guesses left</h2>
+  <div class="guess-display">
+    <h1>{{word}}</h1>
+  </div>
+  <form method="post" action="/loser">
+    <p>You Lose!</p>
+    <button type="submit">Play Again</button>
+  </form>
+  <div class="guessed-wrapper">
+  <h3>Your Guessed Letters</h3>
+  <div class="guessed-letters">
+    {{#guessed}}
+    <p>{{.}}</p>
+    {{/guessed}}
+  </div>
+  </div>
+</body>
+</html>
